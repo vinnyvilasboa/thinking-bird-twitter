@@ -101,7 +101,7 @@ mongoose.connect(process.env.MONGO_URI, {
     useUnifiedTopology: true,
 })
 
- 
+
 // Middleware
 app.use(express.urlencoded({extended: true}))
 
@@ -148,8 +148,4 @@ app.post('/quote', (req, res) => {
             res.redirect('/')
         }
     })
-})
-
-app.listen(port, () => {
-    console.log(`Listening on port: ${port}`)
 })
